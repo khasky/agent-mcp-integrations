@@ -1,6 +1,6 @@
 # Agent MCP Integrations
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Web Reactions](https://api.webreactions.app/badge/github/khasky/agent-mcp-integrations.svg)](https://webreactions.app/?utm_source=github&utm_channel=repository&utm_medium=agent-mcp-integrations)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Emojery](https://api.emojery.app/badge/github/khasky/agent-mcp-integrations.svg)](https://emojery.app/react?t=github/khasky/agent-mcp-integrations)
 
 Setup playbook for the Model Context Protocol (MCP) servers that connect AI coding agents — Claude Code, OpenAI Codex CLI, Gemini CLI — to the outside world: browsers, cloud platforms, databases, infrastructure, and domain APIs. One registration pattern across all three CLIs, the per-server specifics, and the supply-chain checks to run before enabling any of them.
 
