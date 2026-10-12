@@ -44,6 +44,9 @@ Setup playbook for the Model Context Protocol (MCP) servers that connect AI codi
 | `resend` | `npx -y resend-mcp` | `RESEND_API_KEY` | transactional email |
 | `steam` | `npx -y @tmhs/steam-mcp` | `STEAM_API_KEY` | Steam data lookups |
 | `unity` | node bridge from [CoderGamester/mcp-unity](https://github.com/CoderGamester/mcp-unity) | Unity project + UPM package, server on port 8090 (setup below) | scene, GameObject, and asset operations in the Editor |
+| [invokely](https://github.com/estevecastells/invokely-mcp-connector/tree/e47249a2ffc12edf0e79a25cbf15370f47cdedf9) | `node /path/to/invokely-mcp-connector/src/cli.mjs` (local setup below) | Node.js 22; no-account trial (25 calls/day/IP) or Free account (500 calls/month via API key); account for workspace tools, Pro to save/update | Source-cited official statistics, comparisons, rankings, and account workspace tools through a local adapter; hosted service implementation is not included |
+
+For Invokely, clone the [MIT connector](https://github.com/estevecastells/invokely-mcp-connector), check out [commit `e47249a2ffc12edf0e79a25cbf15370f47cdedf9`](https://github.com/estevecastells/invokely-mcp-connector/tree/e47249a2ffc12edf0e79a25cbf15370f47cdedf9), and run `npm ci`. Configure the MCP client to start Node.js 22 with the checkout's `src/cli.mjs` path; see the connector's [local setup instructions](https://github.com/estevecastells/invokely-mcp-connector#run-from-a-checkout) for the configuration shape. The commit pins the local adapter. Its tool list and schemas come from the hosted service at connection time and may change independently.
 
 Register only the servers you actually use, at **user scope** so they are available in every project. An idle server is not free — every connected server adds tool names, descriptions, and schemas to the context, and a browser `snapshot` can return tens of thousands of tokens in a single tool result. Register narrowly; toggle per task in `/mcp`.
 
